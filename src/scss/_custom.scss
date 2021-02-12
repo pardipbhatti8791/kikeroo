@@ -64,7 +64,7 @@ video {
   color: #00b4b7 !important;
 }
 
-.flex { 
+.flex {
   display: flex;
 }
 
@@ -186,12 +186,12 @@ video {
     }
   }
 
-  .move-in-icon {    
+  .move-in-icon {
   animation: arrow-move-in 0.5s forwards;
   -webkit-animation: arrow-move-in 0.5s forwards;
   }
 
-  .move-out-icon {    
+  .move-out-icon {
     animation: arrow-move-out 0.5s forwards;
     -webkit-animation: arrow-move-out 0.5s forwards;
   }
@@ -311,7 +311,7 @@ video {
     color: #00b4b7;
 
     &:before {
-      content: url(../assets/icons/rectangle.png);
+
       position: absolute;
       left: -22px;
       top: 50%;
