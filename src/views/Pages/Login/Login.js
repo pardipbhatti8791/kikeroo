@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../../../actions/auth';
-import { Redirect } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Link, Redirect } from 'react-router-dom';
+import { Container, Form } from 'react-bootstrap';
+import Button from '../../Components/Button/Primary';
+
 const Login = (props) => {
   const [email, setEmail] = useState('demo@gmail.com');
   const [password, setPassword] = useState('demo');
@@ -21,17 +22,23 @@ const Login = (props) => {
   }
   const [show, setShow] = useState(true);
   return (
-    <div className='container-fluid '>
-      <div className='min-vh-100 flex-column d-flex align-items-center justify-content-center'>
-        <div className='signinbox bg-white'>
-          <div className='signin-header text-center'>
-            <Row>
-              <Col sm={6}>fjfvfyhxbyg </Col>
-            </Row>
-            <h2 className='widget-title mb-3'>Sign in</h2>
-            <p>Please enter email and password to login</p>
-          </div>
-          <div className='form-group'>
+    <Container>
+      <div className='LoginWrapper'>
+        <h2 className='widget-title text-center mb-5'>
+          Login to Kikeroo Account
+        </h2>
+
+        <Form>
+          <Form.Group>
+            <Form.Control as='select' defaultValue='Type of account'>
+              <option>Type of account</option>
+              <option>Business </option>
+              <option>Tourist</option>
+              <option>Manager</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group>
             <input
               type='email'
               placeholder='Email'
@@ -41,43 +48,65 @@ const Login = (props) => {
                 setEmail(e.target.value);
               }}
             />
-          </div>
-          <div className='form-group'>
-            <div className='input-group' id='show_hide_password'>
-              <input
-                placeholder='password'
-                type='password'
-                className='form-control'
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-              />
-              <div className='input-group-append'>
-                <a href='' className='input-group-text'>
-                  <i className='fa fa-eye-slash' aria-hidden='true'></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className='form-group'>
-            <button
+          </Form.Group>
+          <Form.Group>
+            <input
+              placeholder='password'
+              type='password'
+              className='form-control'
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control as='select' defaultValue='Type of membership'>
+              <option>Type of membership</option>
+              <option>Free </option>
+              <option>Kikeroo Plus</option>
+            </Form.Control>
+          </Form.Group>
+          <Form.Group>
+            <Button
               className='btn btn-block btn-primary'
               //  style={{ color: 'white', backgroundColor: '#00B3B6', borderColor: '#00B3B6' }}
               type='submit'
               onClick={login}
             >
-              <strong>Login</strong>
-            </button>
-          </div>
+              Login
+            </Button>
+          </Form.Group>
           <div className='text-center'>
-            <a href='#' className='text-dark'>
-              Forget your password?
-            </a>
+            <p className='font-12'>
+              By signing up you agree that you have read and accepted our{' '}
+              <Link to='#' className='text-light'>
+                terms of service{' '}
+              </Link>{' '}
+              and{' '}
+              <Link to='#' className='text-light'>
+                privacy policy
+              </Link>
+              .
+            </p>
+            <div className='font-16 pt-4'>
+              <div>
+                Forget your password?{' '}
+                <Link to='#' className='text-yellow'>
+                  Reset Password
+                </Link>
+              </div>
+              <div>
+                Don't have an Account?{' '}
+                <Link to='/sign-up' className='text-yellow'>
+                  Register Now
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </Form>
       </div>
-    </div>
+    </Container>
   );
 };
 

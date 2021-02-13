@@ -10,7 +10,7 @@ import '~/scss/components/_button.scss';
  */
 export default function Button({
   label,
-  type = 'primary',
+  type = 'default',
   htmlType = 'button',
   children,
   customClass = '',
@@ -20,9 +20,9 @@ export default function Button({
     <button
       type={htmlType}
       className={
-        type === 'primary'
-          ? `btn btn-primary ${customClass}`
-          : `btn btn-outline-primary ${customClass}`
+        type === 'default'
+          ? `btn btn-default ${customClass}`
+          : `btn btn-secondary ${customClass}`
       }
       {...props}
     >

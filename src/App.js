@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import './scss/style.scss';
 import createStore from './store/store';
 import ProtectedRoute from './routing/ProtectedRoute';
+import { TheLayout } from './containers';
 
 const loading = () => (
   <div className='animated fadeIn pt-3 text-center'>
@@ -15,21 +16,17 @@ const store = createStore;
 
 // Containers
 const Login = React.lazy(() => import('./views/Pages/Login/Login'));
-const Register = React.lazy(() => import('./views/Pages/Register/Register'));
+const SignUp = React.lazy(() => import('./views/Pages/SignUp/SignUp'));
 const DefaultLayout = React.lazy(() => import('./containers/TheLayout'));
 
 const App = () => {
-  // useEffect(() => {
-  //     store.dispatch(loadUser());
-  // }, []);
-
   return (
     <Provider store={store}>
       <BrowserRouter>
         <React.Suspense fallback={loading()}>
           <Switch>
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={TheLayout} />
+            <Route exact path='/sign-up' component={TheLayout} />
             <ProtectedRoute path='/' component={DefaultLayout} />
           </Switch>
         </React.Suspense>

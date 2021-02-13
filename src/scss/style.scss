@@ -12,9 +12,10 @@
 // components
 @import "components/pagination";
 
+// containers
+@import "containers/header";
+@import "containers/footer";
 
 // pages
-@import "pages/users";
-@import "pages/user_details";
-
-
+@import "pages/login";
+@import "pages/signup";
