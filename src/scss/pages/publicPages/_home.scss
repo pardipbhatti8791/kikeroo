@@ -1,8 +1,11 @@
-.search-wrapper{
+.search-mainwrapper{
   max-width: 84rem;
   margin: 0 auto;
   padding:3rem 0;
   .filterWrapper{
       background: rgba($color: $inputTypeBg, $alpha:0.8);
+      label{
+        display: block;
+      }
   }
 }
