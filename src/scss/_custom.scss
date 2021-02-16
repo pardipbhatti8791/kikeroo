@@ -9,7 +9,6 @@
 
 html {
   font-size: 10px;
-
   @media(max-width:767px) {
     font-size: 8px;
   }
@@ -22,7 +21,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: #fff;
-background-color: rgba(18, 24, 44, 0.85);
+background-color: $bodyColor;
 }
 
 .container {
@@ -72,15 +71,31 @@ video {
   font-size: 2rem;
   line-height: 1.5;
   color: #fff;
-  background: #12182C;
+  background: $inputTypeBg;
   border: 2px solid #fff;
   border-radius: 4px;
   &:focus {
-    box-shadow: none;
+    box-shadow: 0 0 0px 100rem $inputTypeBg inset;
     color: #fff;
     border-color: #fff;
-    background: #12182C;
+    background: $inputTypeBg;
   }
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 100rem $inputTypeBg inset;
+  box-shadow: 0 0 0px 100rem $inputTypeBg inset;
+  -webkit-text-fill-color: $colorWhite !important;
+}
+.form-control::-webkit-input-placeholder { /* Edge */
+  color: $colorWhite;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $colorWhite;
+}
+
+.form-control::placeholder {
+  color: $colorWhite;
 }
 
 .form-group {
@@ -109,4 +124,11 @@ video {
 }
 .text-yellow{
   color: $colorYellow;
+}
+.commonbody-topPadding{
+  padding-top: 11rem;
+}
+.commonbody-bg{
+  background: url('../assets/images/kikeroo-bodybg.jpg') no-repeat center ;
+  background-size: cover;
 }

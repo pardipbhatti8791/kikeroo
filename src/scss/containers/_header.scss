@@ -1,6 +1,14 @@
 .site-header {
     font-size: 2rem;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    .site-logo{
+        max-width: 16rem;
+    }
     .bg-dark{
         background: transparent !important;
         padding: 0 2rem;

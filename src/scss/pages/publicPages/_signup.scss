@@ -1,0 +1,20 @@
+.signupTabs{
+ .nav-tabs{
+   border: 0;
+   justify-content: center;
+   margin-bottom: 2rem;
+   border-radius: $primaryBorderRadius;
+   overflow: hidden;
+   .nav-link{
+    background-color: $secondaryColor;
+    border: 0;
+    color: rgba($color: #fff, $alpha:0.6);
+    padding: 1rem 2.5rem;
+    &.active{
+      color: $colorWhite;
+      background-color: $secondaryColor_v2;
+    }
+   }
+   
+ }
+}

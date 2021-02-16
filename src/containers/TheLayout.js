@@ -5,11 +5,9 @@ import TheHeader from './TheHeader';
 const TheLayout = () => {
   return (
     <>
-      <main>
-        <TheHeader />
-        <TheContent />
-        <TheFooter />
-      </main>
+      <TheHeader />
+      <TheContent />
+      <TheFooter />
     </>
   );
 };

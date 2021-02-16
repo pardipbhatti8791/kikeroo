@@ -1,7 +1,14 @@
 import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const TheHeader = () => {
+  const logout = () => {
+    localStorage.removeItem('auth');
+    window.location.reload();
+  };
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
   return (
     <header className='site-header'>
       <Container>
@@ -54,22 +61,30 @@ const TheHeader = () => {
             </Navbar.Collapse>
           </Navbar>
           <div className='header-right d-flex'>
-            <NavLink
-              exact
-              activeClassName='active'
-              className='nav-link'
-              to='/sign-up'
-            >
-              Sign up
-            </NavLink>
-            <NavLink
-              exact
-              activeClassName='active'
-              className='nav-link pr-0'
-              to='/login'
-            >
-              Login
-            </NavLink>
+            {isAuthenticated ? (
+              <Link to='#' onClick={logout}>
+                Logout
+              </Link>
+            ) : (
+              <>
+                <NavLink
+                  exact
+                  activeClassName='active'
+                  className='nav-link'
+                  to='/sign-up'
+                >
+                  Sign up
+                </NavLink>
+                <NavLink
+                  exact
+                  activeClassName='active'
+                  className='nav-link pr-0'
+                  to='/login'
+                >
+                  Login
+                </NavLink>
+              </>
+            )}
           </div>
         </div>
       </Container>
