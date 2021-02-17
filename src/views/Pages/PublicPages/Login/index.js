@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import { Container, Form } from 'react-bootstrap';
-import Button from '../../../Components/Button/Primary';
+import { Container, Form, Button } from 'react-bootstrap';
 
 const Login = (props) => {
   const [email, setEmail] = useState('demo@gmail.com');
@@ -70,9 +69,10 @@ const Login = (props) => {
             </Form.Group>
             <Form.Group>
               <Button
-                className='btn btn-block btn-primary'
-                //  style={{ color: 'white', backgroundColor: '#00B3B6', borderColor: '#00B3B6' }}
+                variant='primary'
+                className=' btn-block font-16'
                 type='submit'
+                size='lg'
                 onClick={login}
               >
                 Login

@@ -12,7 +12,7 @@ const loading = (
 
 const TheContent = (props) => {
   return (
-    <main>
+    <main className='site-content'>
       <Suspense fallback={loading}>
         <Switch>
           {routes.map((route, idx) => {

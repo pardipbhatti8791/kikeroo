@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Form } from 'react-bootstrap';
-import Button from '../../../../Components/Button/Primary';
+import { Container, Form, Button } from 'react-bootstrap';
 
 const BusinessSignUp = (props) => {
   return (
@@ -36,7 +35,12 @@ const BusinessSignUp = (props) => {
         </Form.Group>
 
         <Form.Group>
-          <Button className='btn btn-block btn-primary' type='submit'>
+          <Button
+            variant='primary'
+            className=' btn-block font-16'
+            type='submit'
+            size='lg'
+          >
             Sign Up
           </Button>
         </Form.Group>
