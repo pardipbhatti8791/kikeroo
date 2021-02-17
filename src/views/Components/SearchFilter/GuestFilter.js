@@ -1,8 +1,8 @@
-import { faChevronDown, faMinus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button, Dropdown, Form } from 'react-bootstrap';
-const KikerooMoreFilter = () => {
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const KikerooGuestFilter = () => {
   return (
     <div className='guestFilter'>
       <Dropdown>
@@ -57,4 +57,4 @@ const KikerooMoreFilter = () => {
   );
 };
 
-export default KikerooMoreFilter;
+export default KikerooGuestFilter;
