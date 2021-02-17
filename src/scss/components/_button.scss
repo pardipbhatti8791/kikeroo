@@ -6,6 +6,21 @@
   &:active {
     box-shadow: none;
   }
+  &.btn-xl{
+    font-size: $font16;
+    padding:1.1rem 2.5rem;
+
+  }
+}
+.btn-warning{
+  background: $colorYellow;
+  border-color: $colorYellow;
+  &:hover,
+  &:focus {
+    background: $colorYellow;
+  border-color: $colorYellow;
+  opacity: 0.8;
+  }
 }
 .btn-primary {
   background-color: $primaryColor;
