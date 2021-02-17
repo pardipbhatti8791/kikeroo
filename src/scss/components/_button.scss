@@ -1,18 +1,7 @@
 @import '../variables';
 .btn {
   font-weight: $fontSemiBold;
-  padding: 1.32rem 2rem;
-  font-size: $font16;
-  border-radius: $primaryBorderRadius;
-  // text-transform: uppercase;
   transition: 0.5s;
-  line-height: 1.15;
-  border-width: 2px;
-  &.btn-default {
-    background: transparent;
-    font-weight: 400;
-    color: $primaryColor;
-  }
   &:focus,
   &:active {
     box-shadow: none;

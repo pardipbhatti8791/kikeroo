@@ -5,35 +5,37 @@ import { Route, Switch } from 'react-router-dom';
 import routes from '../routing/routes';
 
 const loading = (
-    <div className='pt-3 text-center'>
-        <div className='sk-spinner sk-spinner-pulse'></div>
-    </div>
+  <div className='pt-3 text-center'>
+    <div className='sk-spinner sk-spinner-pulse'></div>
+  </div>
 );
 
-const TheContent = props => {
-    return (
-        <Suspense fallback={loading}>
-            <Switch>
-                {routes.map((route, idx) => {
-                    return (
-                        route.component && (
-                            <Route
-                                key={idx}
-                                path={route.path}
-                                exact={route.exact}
-                                name={route.name}
-                                render={props => (
-                                    <>
-                                        <route.component {...props} />
-                                    </>
-                                )}
-                            />
-                        )
-                    );
-                })}
-            </Switch>
-        </Suspense>
-    );
+const TheContent = (props) => {
+  return (
+    <main className='site-content'>
+      <Suspense fallback={loading}>
+        <Switch>
+          {routes.map((route, idx) => {
+            return (
+              route.component && (
+                <Route
+                  key={idx}
+                  path={route.path}
+                  exact={route.exact}
+                  name={route.name}
+                  render={(props) => (
+                    <>
+                      <route.component {...props} />
+                    </>
+                  )}
+                />
+              )
+            );
+          })}
+        </Switch>
+      </Suspense>
+    </main>
+  );
 };
 
 export default React.memo(TheContent);

@@ -3,7 +3,6 @@
 @import "variables";
 
 //utilies
-
 @import "utilities/mixins";
 
 // If you want to add something do it here
@@ -11,11 +10,13 @@
 
 // components
 @import "components/pagination";
+@import "components/button";
 
 // containers
 @import "containers/header";
 @import "containers/footer";
 
 // pages
-@import "pages/login";
-@import "pages/signup";
+@import "pages/publicPages/login";
+@import "pages/publicPages/signup";
+@import "pages/publicPages/home";

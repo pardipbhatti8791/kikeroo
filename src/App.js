@@ -15,8 +15,13 @@ const loading = () => (
 const store = createStore;
 
 // Containers
-const Login = React.lazy(() => import('./views/Pages/Login/Login'));
-const SignUp = React.lazy(() => import('./views/Pages/SignUp/SignUp'));
+const KikerooHome = React.lazy(() =>
+  import('./views/Pages/PublicPages/Home/index')
+);
+const Login = React.lazy(() => import('./views/Pages/PublicPages/Login/index'));
+const SignUp = React.lazy(() =>
+  import('./views/Pages/PublicPages/SignUp/index')
+);
 const DefaultLayout = React.lazy(() => import('./containers/TheLayout'));
 
 const App = () => {
@@ -25,6 +30,7 @@ const App = () => {
       <BrowserRouter>
         <React.Suspense fallback={loading()}>
           <Switch>
+            <Route exact path='/home' component={TheLayout} />
             <Route exact path='/login' component={TheLayout} />
             <Route exact path='/sign-up' component={TheLayout} />
             <ProtectedRoute path='/' component={DefaultLayout} />
