@@ -1,0 +1,13 @@
+
+.LoginWrapperBg{
+  background: url('../assets/images/login-bg.jpg') no-repeat center ;
+  background-size: cover;
+  .LoginWrapper{
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 20vh 0 ;
+    .btn{
+      padding:1rem 2rem;
+    }
+  }
+}

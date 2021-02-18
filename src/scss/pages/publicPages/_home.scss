@@ -1,0 +1,42 @@
+
+.home-banner{
+  background: url(../assets/images/home-banner.jpg) no-repeat center;
+  background-size: cover;
+  padding:10rem 0 20rem;
+  .widget-title{
+    max-width: 58rem;
+  }
+}
+.home-commonWrapper{
+  padding-bottom: 3rem;
+  overflow: hidden;
+  &.places-sec{
+    padding-bottom: 6rem;
+  }
+  .common-innerWrapper{
+    margin: 0 -1.2rem;
+    @include flex_parent_between;
+  }
+  .commonSingle{
+    position: relative;
+    margin: 0 1rem 2rem;
+    border-radius: $primaryBorderRadius;
+    &::before{
+      content: "";
+      @include fill_parent;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) -7.83%, rgba(8, 11, 20, 0.7) 93.4%);
+    }
+    .contentBox{
+      position: absolute;
+      left: 2rem;
+      z-index: 1;
+      bottom: 2rem;
+      .widget-title{
+        margin: 3px 0;
+      }
+      .post-date{
+        font-size: $font12;
+      }
+    }
+  }
+}

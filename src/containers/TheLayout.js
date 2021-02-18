@@ -1,15 +1,16 @@
 import React from 'react';
-
-import { TheContent } from './index';
+import TheFooter from './TheFooter';
+import TheContent from './TheContent';
+import TheHeader from './TheHeader';
 
 const TheLayout = () => {
-    return (
-        <>
-            <main>
-                <TheContent />
-            </main>
-        </>
-    );
+  return (
+    <>
+      <TheHeader />
+      <TheContent />
+      <TheFooter />
+    </>
+  );
 };
 
 export default TheLayout;

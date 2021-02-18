@@ -3,18 +3,22 @@
 @import "variables";
 
 //utilies
-
 @import "utilities/mixins";
 
 // If you want to add something do it here
 @import "custom";
 
 // components
-@import "components/pagination";
+@import "components/searchfilter";
+@import "components/button";
 
+// containers
+@import "containers/header";
+@import "containers/footer";
 
 // pages
-@import "pages/users";
-@import "pages/user_details";
-
-
+@import "pages/publicPages/login";
+@import "pages/publicPages/signup";
+@import "pages/publicPages/home";
+@import "pages/publicPages/aboutus";
+@import "pages/publicPages/search-results";

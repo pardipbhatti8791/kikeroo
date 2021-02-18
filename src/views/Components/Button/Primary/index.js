@@ -8,13 +8,25 @@ import '~/scss/components/_button.scss';
  * @returns {*}
  * @constructor
  */
-export default function Button({ label, type = 'primary', htmlType = 'button', children, customClass = '', ...props }) {
-    return (
-        <button
-            type={htmlType}
-            className={type === 'primary' ? `btn btn-primary ${customClass}` : `btn btn-secondary ${customClass}`}
-            {...props}>
-            {children !== undefined ? children : label}
-        </button>
-    );
+export default function Button({
+  label,
+  type = 'primary',
+  htmlType = 'button',
+  children,
+  customClass = '',
+  ...props
+}) {
+  return (
+    <button
+      type={htmlType}
+      className={
+        type === 'primary'
+          ? `btn btn-primary ${customClass}`
+          : `btn btn-outline-primary ${customClass}`
+      }
+      {...props}
+    >
+      {children !== undefined ? children : label}
+    </button>
+  );
 }
