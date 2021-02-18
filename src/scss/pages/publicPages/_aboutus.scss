@@ -1,0 +1,16 @@
+.page-banner{
+    background: url(../assets/images/aboutus-banner.jpg) no-repeat center;
+    background-size: cover;
+    padding: 25rem 0 2rem;
+    position: relative;
+    z-index: $zAbove;
+    &::before{
+        content: "";
+        @include fill_parent;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) -10.32%, rgba(8, 11, 20, 0.72) 81.59%);
+        z-index: $zBelow;
+    }
+}
+.aboutpage-content{
+    padding: 4rem 0 8rem;
+}
