@@ -6,6 +6,9 @@
     right: 0;
     top: 0;
     z-index: 99;
+    &.header-bg{
+        background-color: $inputTypeBg; 
+    }
     .site-logo{
         max-width: 16rem;
     }

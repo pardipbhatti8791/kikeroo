@@ -18,11 +18,11 @@
   }
     .filterWrapper{
         background: rgba($color: $inputTypeBg, $alpha:0.8);
-        padding: 1rem ;
+
         margin-bottom:2rem;
         .filterSingle{
           width: 25%;
-          padding:0 1rem;
+          padding:1rem 1.5rem;
           .searchTypeFilter{
             .form-group{
               margin: 0;
@@ -136,4 +136,11 @@
       align-items: flex-end;
       margin-top: 3rem;
   }
+  }
+  .search-resultPage{
+    .filterWrapper {
+      .filterSingle{
+        border: 1px solid $colorWhite;
+      }
+    }
   }

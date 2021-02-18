@@ -1,6 +1,6 @@
 import React from 'react';
-import { Col, Container, Row, Navbar, Nav } from 'react-bootstrap';
-
+import { Col, Container, Row, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const TheFooter = () => {
   return (
     <footer className='site-footer'>
@@ -10,26 +10,66 @@ const TheFooter = () => {
             <div className='d-md-flex justify-content-around'>
               <div className='mb-5'>
                 <h2 className='font-20 font-semibold'>Support </h2>
+
                 <Nav className='flex-column'>
-                  <Nav.Link eventKey='#'>Support</Nav.Link>
-                  <Nav.Link eventKey='#'>Careers</Nav.Link>
-                  <Nav.Link eventKey='#'>Terms</Nav.Link>
+                  <Link to='/support' className='nav-link'>
+                    Support
+                  </Link>
+                  <Link className='nav-link' to='/career'>
+                    Careers
+                  </Link>
+                  <Link to='/terms' className='nav-link'>
+                    Terms
+                  </Link>
                 </Nav>
               </div>
               <div className='mb-5'>
                 <h2 className='font-20 font-semibold'>Information </h2>
                 <Nav className='flex-column'>
-                  <Nav.Link eventKey='#'>About Us</Nav.Link>
-                  <Nav.Link eventKey='#'>Booking for gifts</Nav.Link>
-                  <Nav.Link eventKey='#'>Site map</Nav.Link>
+                  <Link to='/about-us' className='nav-link'>
+                    About Us
+                  </Link>
+                  <Link to='#' className='nav-link'>
+                    Booking for gifts
+                  </Link>
+                  <Link to='#' className='nav-link'>
+                    Site map
+                  </Link>
                 </Nav>
               </div>
               <div className='mb-5'>
                 <h2 className='font-20 font-semibold'>Social networks</h2>
                 <Nav className='flex-column'>
-                  <Nav.Link eventKey='#'>Facebook</Nav.Link>
-                  <Nav.Link eventKey='#'>Linkedin</Nav.Link>
-                  <Nav.Link eventKey='#'>Instagram</Nav.Link>
+                  <Link
+                    to={{ pathname: 'https://www.facebook.com/Kikeroo2020/' }}
+                    target='_blank'
+                    className='nav-link'
+                  >
+                    Facebook
+                  </Link>
+                  {/* <Link
+                 //   to={{ pathname: 'https://twitter.com/Kikeroo1' }}
+                    target='_blank'
+                    className='nav-link'
+                  >
+                    Twitter
+                  </Link> */}
+                  <Link
+                    to={{
+                      pathname: 'https://www.linkedin.com/company/kikeroo/',
+                    }}
+                    target='_blank'
+                    className='nav-link'
+                  >
+                    Linkedin
+                  </Link>
+                  <Link
+                    to={{ pathname: 'https://www.instagram.com/kikeroo_/' }}
+                    target='_blank'
+                    className='nav-link'
+                  >
+                    Instagram
+                  </Link>
                 </Nav>
               </div>
             </div>

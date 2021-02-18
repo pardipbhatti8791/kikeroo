@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-const TheHeader = () => {
+const TheHeaderTwo = () => {
   const logout = () => {
     localStorage.removeItem('auth');
     window.location.reload();
@@ -10,7 +10,7 @@ const TheHeader = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   return (
-    <header className='site-header'>
+    <header className='site-header header-bg'>
       <Container>
         <div className='header-main'>
           <div className='site-logo'>
@@ -92,4 +92,4 @@ const TheHeader = () => {
   );
 };
 
-export default TheHeader;
+export default TheHeaderTwo;
