@@ -7,9 +7,7 @@ const Career = () => {
       <section className='page-commonPadding font-20'>
         <Container>
           <div className='max-width58 mx-auto'>
-            <h2 className='widget-title text-center mb-5'>
-              Login to Kikeroo Account
-            </h2>
+            <h2 className='widget-title text-center mb-5'>Careers</h2>
             <p className='font-20 text-center mb-5'>
               We are not looking for new people at the moment but fill in the
               form with your details and we will contact you back if we need

@@ -34,7 +34,13 @@ const KikerooSearchResults = React.lazy(() =>
 const Career = React.lazy(() =>
   import('./views/Pages/PublicPages/Career/index')
 );
+const SiteMap = React.lazy(() =>
+  import('./views/Pages/PublicPages/SiteMap/index')
+);
 const Login = React.lazy(() => import('./views/Pages/PublicPages/Login/index'));
+const BookingGift = React.lazy(() =>
+  import('./views/Pages/PublicPages/BookingGift/index')
+);
 const SignUp = React.lazy(() =>
   import('./views/Pages/PublicPages/SignUp/index')
 );
@@ -52,6 +58,8 @@ const App = () => {
             <Route exact path='/terms' component={TheLayout} />
             <Route exact path='/search-results' component={TheLayoutTwo} />
             <Route exact path='/career' component={TheLayout} />
+            <Route exact path='/booking-gift' component={TheLayout} />
+            <Route exact path='/site-map' component={TheLayout} />
             <Route exact path='/login' component={TheLayout} />
             <Route exact path='/sign-up' component={TheLayout} />
             <ProtectedRoute path='/' component={DefaultLayout} />

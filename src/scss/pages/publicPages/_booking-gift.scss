@@ -1,0 +1,34 @@
+.singleProduct-Wrapper{
+    border:1px solid #C4C4C4;
+    padding:0 4rem 2rem;
+    background-color:$bodyColor ;
+    .product-galleryBox {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 1rem;
+        margin-bottom: 3rem;
+        .imgSingle{
+            &:first-child{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+        }
+    }
+}
+.bookingPageWrapper{
+    .filterWrapper {
+        background-color: transparent;
+        .filterSingle{
+            width: 50%;
+            border: 1px solid $colorWhite;
+        }
+        .dynamic-text{
+            font-size: $font14;
+        }
+        .label-heading{
+            font-size: 12px;
+        }
+    }
+}

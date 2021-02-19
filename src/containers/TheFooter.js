@@ -6,7 +6,7 @@ const TheFooter = () => {
     <footer className='site-footer'>
       <Container>
         <Row>
-          <Col md={{ span: 7, offset: 2 }}>
+          <Col lg={{ span: 7, offset: 2 }} md='9'>
             <div className='d-md-flex justify-content-around'>
               <div className='mb-5'>
                 <h2 className='font-20 font-semibold'>Support </h2>
@@ -29,10 +29,10 @@ const TheFooter = () => {
                   <Link to='/about-us' className='nav-link'>
                     About Us
                   </Link>
-                  <Link to='#' className='nav-link'>
+                  <Link to='/booking-gift' className='nav-link'>
                     Booking for gifts
                   </Link>
-                  <Link to='#' className='nav-link'>
+                  <Link to='/site-map' className='nav-link'>
                     Site map
                   </Link>
                 </Nav>
@@ -74,8 +74,8 @@ const TheFooter = () => {
               </div>
             </div>
           </Col>
-          <Col md='3'>
-            <h2 className='font-24 font-extrabold text-md-right'>Kikeroo</h2>
+          <Col lg='3' md='3'>
+            <h2 className='font-24 font-extrabold text-lg-right'>Kikeroo</h2>
           </Col>
         </Row>
       </Container>

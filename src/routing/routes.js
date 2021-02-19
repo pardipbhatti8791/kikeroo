@@ -21,7 +21,13 @@ const KikerooSearchResults = React.lazy(() =>
 const Career = React.lazy(() =>
   import('~/views/Pages/PublicPages/Career/index')
 );
+const SiteMap = React.lazy(() =>
+  import('~/views/Pages/PublicPages/SiteMap/index')
+);
 const Login = React.lazy(() => import('~/views/Pages/PublicPages/Login/index'));
+const BookingGift = React.lazy(() =>
+  import('~/views/Pages/PublicPages/BookingGift/index')
+);
 const SignUp = React.lazy(() =>
   import('~/views/Pages/PublicPages/SignUp/index')
 );
@@ -32,7 +38,9 @@ const routes = [
   { path: '/home', name: 'Home', component: KikerooHome },
   { path: '/about-us', name: 'AboutUs', component: AboutUs },
   { path: '/support', name: 'Support', component: Support },
+  { path: '/booking-gift', name: 'BookingGift', component: BookingGift },
   { path: '/terms', name: 'Terms', component: TermsCondition },
+  { path: '/site-map', name: 'SiteMap', component: SiteMap },
   {
     path: '/search-results',
     name: 'SearchResults',

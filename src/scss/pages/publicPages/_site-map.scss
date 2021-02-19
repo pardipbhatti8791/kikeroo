@@ -1,0 +1,95 @@
+.siteMap-wrapper{
+    font-size: $font20;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $fontSemiBold;
+    min-height: 90vh;
+    .sitemap-list{
+        margin-left: 20rem;
+        padding-left: 4rem;
+        position: relative;
+        @media screen and (max-width:1024px) {
+            margin-left: 10rem;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1.5rem;
+            bottom: 1.5rem;
+            border-left: 1px solid $colorWhite;
+        }
+        li{
+            margin-bottom: 5rem;
+            position: relative;
+            &::before{
+                content: "-----";
+                position: absolute;
+                left: -4rem;
+               top: 0;
+               letter-spacing: -3px;
+            }
+            &.homeli{
+                position: absolute;
+                left: -10rem;
+                top: 0;
+                &::before{
+                   left: auto;
+                    right: -4rem;
+                   
+                }
+            }
+        }
+        .innerlist{
+            position: absolute;
+            left:6rem;
+            top: 0;
+            @media screen and (max-width:1024px) {
+                position: static;
+              margin-top: 4rem;
+            }
+            li{
+                margin-left: 8rem;
+            padding-left: 4rem;
+            @media screen and (max-width:1024px) {
+                
+                    margin-left: 5rem;
+            }
+           
+                &::before{
+                    content: "----------";
+                    position: absolute;
+                    left: -4rem;
+                  
+                }
+            }
+        }
+        .profilelist{
+            position: absolute;
+            left: 14rem;
+            top: 100%;
+            margin-top: 1rem;
+            li{
+                padding-left: 2rem;
+                &::before{
+                    content: "----------";
+                    position: absolute;
+                    left: -4rem;
+                    transform: rotate(45deg);
+                    top: -3rem;
+                  
+                }
+                &::after{
+                    content: "----------";
+                    position: absolute;
+                    left: -4rem;
+                    transform: rotate(-45deg);
+                    bottom: -3rem;
+                    letter-spacing: -3px;
+                  
+                }
+            }
+            
+        }
+    
+    }
+}

@@ -27,6 +27,11 @@ background-color: $bodyColor;
 .container {
   max-width: 1200px;
 }
+ul,ol,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 h1,
 h2,
@@ -126,6 +131,9 @@ input:-webkit-autofill {
 .font-12{
   font-size:$font12;
 }
+.font-14{
+  font-size:$font14;
+}
 .font-16{
   font-size:$font16;
 }
@@ -146,6 +154,9 @@ input:-webkit-autofill {
 }
 .commonbody-topPadding{
   padding-top: 11rem;
+  @media screen and (max-width:991px) {
+    padding-top:8.5rem;
+  }
 }
 .commonbody-bg{
   background: url('../assets/images/kikeroo-bodybg.jpg') no-repeat center ;
@@ -196,4 +207,23 @@ input:-webkit-autofill {
 }
 .max-width58{
   max-width: 58rem;
+}
+.max-width78{
+  max-width: 80rem;;
+}
+.listicon{
+  margin-bottom: 2rem;
+  li{
+    position: relative;
+    padding-left: 2rem;
+    &::before{
+      content: "--";
+      position: absolute;
+      left: 0;
+      top: 0;
+      letter-spacing: -3px;
+    }
+  }
+
+  
 }
