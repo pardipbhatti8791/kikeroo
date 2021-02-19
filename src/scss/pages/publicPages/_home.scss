@@ -16,27 +16,44 @@
   .common-innerWrapper{
     margin: 0 -1.2rem;
     @include flex_parent_between;
-  }
-  .commonSingle{
-    position: relative;
-    margin: 0 1rem 2rem;
-    border-radius: $primaryBorderRadius;
-    &::before{
-      content: "";
-      @include fill_parent;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) -7.83%, rgba(8, 11, 20, 0.7) 93.4%);
+    flex-wrap: wrap;
+    @media screen and (max-width:991px) {
+      margin: 0 1rem;
     }
-    .contentBox{
-      position: absolute;
-      left: 2rem;
-      z-index: 1;
-      bottom: 2rem;
-      .widget-title{
-        margin: 3px 0;
+    .commonSingle{
+      position: relative;
+      margin: 0 1rem 2rem;
+      border-radius: $primaryBorderRadius;
+      width: calc(20% - 2rem);
+      @media screen and (max-width:991px) {
+        width: calc(50% - 2rem);
       }
-      .post-date{
-        font-size: $font12;
+      @media screen and (max-width:567px) {
+        width: calc(100% - 2rem);
+      }
+      &::before{
+        content: "";
+        @include fill_parent;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) -7.83%, rgba(8, 11, 20, 0.7) 93.4%);
+      }
+      .contentBox{
+        position: absolute;
+        left: 2rem;
+        z-index: 1;
+        bottom: 2rem;
+        .widget-title{
+          margin: 3px 0;
+        }
+        .post-date{
+          font-size: $font12;
+        }
+      }
+      @media screen and (max-width:991px) {
+      &:last-child{
+        display: none;
       }
     }
+    }  
   }
+  
 }

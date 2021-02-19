@@ -2,6 +2,9 @@ import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 const TheHeader = () => {
   const logout = () => {
     localStorage.removeItem('auth');
@@ -15,15 +18,13 @@ const TheHeader = () => {
         <div className='header-main'>
           <div className='site-logo'>
             <Link to='/'>
-              <img
-                src='assets/images/kikeroo-logo.png'
-                alt='site-logo'
-                className='d-xl-block d-none'
-              />
+              <img src='assets/images/kikeroo-logo.png' alt='site-logo' />
             </Link>
           </div>
           <Navbar bg='dark' variant='dark' expand='lg'>
-            <Navbar.Toggle aria-controls='basic-navbar-nav' />
+            <Navbar.Toggle aria-controls='basic-navbar-nav'>
+              <FontAwesomeIcon icon={faBars} />
+            </Navbar.Toggle>
             <Navbar.Collapse id='basic-navbar-nav'>
               <Nav className='mr-auto'>
                 <NavLink
@@ -57,10 +58,34 @@ const TheHeader = () => {
                 >
                   Register a company
                 </NavLink>
+                {isAuthenticated ? (
+                  <Link to='#' onClick={logout} className='d-block d-lg-none'>
+                    Logout
+                  </Link>
+                ) : (
+                  <>
+                    <NavLink
+                      exact
+                      activeClassName='active'
+                      className='nav-link d-block d-lg-none'
+                      to='/sign-up'
+                    >
+                      Sign up
+                    </NavLink>
+                    <NavLink
+                      exact
+                      activeClassName='active'
+                      className='nav-link d-block d-lg-none'
+                      to='/login'
+                    >
+                      Login
+                    </NavLink>
+                  </>
+                )}
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <div className='header-right d-flex'>
+          <div className='header-right'>
             {isAuthenticated ? (
               <Link to='#' onClick={logout}>
                 Logout
